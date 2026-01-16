@@ -1,4 +1,4 @@
-- **Consolidated Analysis**: The entire analytical pipeline is documented in [comprehensive_uidai_analysis.ipynb](file:/comprehensive_uidai_analysis.ipynb).
+# **Consolidated Analysis**: The entire analytical pipeline is documented in [comprehensive_uidai_analysis.ipynb](file:/comprehensive_uidai_analysis.ipynb).
 
 ## 1. DATA UNDERSTANDING
 The analysis utilizes three primary datasets representing UIDAI operations from March to December 2025:
