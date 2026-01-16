@@ -1,0 +1,803 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- FONTS & ENCODING ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% --- PAGE LAYOUT ---
+\usepackage{geometry}
+\geometry{top=0.75in, bottom=0.75in, left=0.8in, right=0.8in}
+
+% --- FORMATTING PACKAGES ---
+\usepackage{xcolor}
+\usepackage{parskip}      % Nice paragraph spacing
+\usepackage{setspace}     % Line spacing control
+\usepackage{enumitem}     % For compact lists
+\usepackage{array}        % Improved table formatting
+
+% --- IMAGE HANDLING ---
+\usepackage{graphicx} 
+\usepackage{float}        % Allows usage of [H]
+\usepackage{caption}      % Better caption control
+
+% --- SPACING SETTINGS ---
+\setstretch{1.15}         
+\setlength{\parindent}{0pt}
+
+% --- GLOBAL COLORS ---
+\definecolor{uidaiBlue}{RGB}{0,70,140}
+\definecolor{uidaiOrange}{RGB}{230,120,20}
+\definecolor{softGray}{RGB}{90,90,90}
+
+\begin{document}
+
+%========================
+% COVER PAGE – TEAM DETAILS
+%========================
+\thispagestyle{empty}
+
+\vspace*{2cm}
+
+\begin{center}
+    % Main Title
+    {\Huge \textbf{\textcolor{uidaiBlue}{UIDAI Data Hackathon – 2026}}}\\[0.8em]
+    {\Large \textcolor{softGray}{Strategic Insights into Aadhaar Enrolment and Update Dynamics}}\\[2em]
+
+    % Divider
+    \textcolor{uidaiOrange}{\rule{0.8\linewidth}{1.8pt}}\\[2em]
+
+    % Submission Info
+    {\Large \textbf{\textcolor{uidaiBlue}{Team Submission}}}\\[1.5em]
+\end{center}
+
+\vspace{1cm}
+
+% Team Details Box
+\noindent
+\begin{tabular}{p{6cm} p{8cm}}
+\textbf{Team ID} & UIDAI\_3913 \\[0.6em]
+\textbf{Hackathon} & UIDAI Data Hackathon – 2026 \\[0.6em]
+\textbf{Number of Team Members} & 4 \\[0.6em]
+\end{tabular}
+
+\vspace{1.5em}
+
+% Team Members
+\noindent
+\textbf{\textcolor{uidaiBlue}{Team Composition}}\\[0.8em]
+
+\begin{tabular}{|p{5cm}|p{8cm}|}
+\hline
+\textbf{Role} & \textbf{Name} \\
+\hline
+Team Lead & Ganesh Jaishi \\
+\hline
+Team Member 1 & Chandan Giri \\
+\hline
+Team Member 2 & --- \\
+\hline
+Team Member 3 & --- \\
+\hline
+\end{tabular}
+
+\vspace{2em}
+
+% Footer for Cover Page
+\noindent
+\textcolor{uidaiOrange}{\rule{\linewidth}{1.2pt}}\\[0.5em]
+\begin{center}
+{\small \textcolor{softGray}{
+This report is submitted as part of the UIDAI Data Hackathon – 2026 and presents an original analytical framework developed using UIDAI-provided datasets.
+}}
+\end{center}
+
+\newpage 
+
+%=============================================================================
+% PAGE 1: EXECUTIVE SUMMARY
+%=============================================================================
+\thispagestyle{empty}
+
+% Title Section
+\begin{center}
+    \vspace*{-1em}
+    {\Huge \textbf{\textcolor{uidaiBlue}{Executive Summary}}}\\[0.5em]
+    {\large \textcolor{softGray}{Strategic Insights into Aadhaar Enrolment and Update Dynamics}}
+\end{center}
+
+\vspace{0.8em}
+
+% Horizontal rule
+\noindent\textcolor{uidaiOrange}{\rule{\linewidth}{1.5pt}}
+
+\vspace{1em}
+
+% Paragraph 1
+\noindent
+\textbf{\textcolor{uidaiBlue}{Context}}\\[0.2em]
+Aadhaar is no longer only a large-scale identity enrolment system; it has evolved into a living public infrastructure that continuously reflects population dynamics, mobility, and service dependency across India. Enrolment and update records capture critical societal signals such as birth registration patterns, migration-driven address changes, and the growing need for biometric maintenance as the population ages. Understanding these patterns is essential for ensuring that Aadhaar remains accessible, reliable, and operationally efficient as it transitions from expansion to long-term maintenance.
+
+\vspace{0.8em}
+
+% Paragraph 2
+\noindent
+\textbf{\textcolor{uidaiBlue}{Analytical Approach}}\\[0.2em]
+This study analyzes Aadhaar enrolment, biometric update, and demographic update data from March to December 2025 to uncover meaningful trends, anomalies, and early warning signals. The approach combines time-based trend analysis, regional comparison across states, service composition profiling, anomaly detection in reporting behavior, and forward-looking stress indicators. The objective is not only to describe what has happened, but to identify signals that can support proactive administrative decision-making.
+
+\vspace{0.8em}
+
+% Paragraph 3
+\noindent
+\textbf{\textcolor{uidaiBlue}{Key Findings}}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item \textbf{Aadhaar enrolment has reached adult saturation:} Nearly all new enrolments now originate from children and adolescents, indicating that Aadhaar has transitioned from mass adult onboarding to a birth-linked identity system.
+    \item \textbf{Operational demand has shifted from enrolment to maintenance:} In several mature states, biometric and demographic updates significantly exceed new enrolments, reshaping infrastructure and staffing requirements.
+    \item \textbf{Service demand is unevenly distributed across regions:} Update activity is highly concentrated in a limited number of states, while enrolment infrastructure remains relatively more balanced nationwide.
+    \item \textbf{System-level reporting practices affect real-time visibility:} Recurrent activity spikes at the beginning of each month indicate batch synchronization behavior, limiting the ability to respond quickly to emerging service pressures.
+\end{itemize}
+
+\vspace{0.8em}
+
+% Paragraph 4
+\noindent
+\textbf{\textcolor{uidaiBlue}{Impact and Relevance for UIDAI}}\\[0.2em]
+These insights enable UIDAI to move from reactive service management toward anticipatory governance. By aligning enrolment infrastructure with birth registration systems, reallocating resources toward high-demand update services, and using early warning indicators to detect operational stress before backlogs emerge, UIDAI can improve service reliability while optimizing cost and capacity. More broadly, this analysis supports equitable access to Aadhaar services and strengthens the system’s ability to adapt to India’s evolving demographic and mobility patterns.
+
+% NO FOOTER HERE AS REQUESTED
+\vfill
+
+%=============================================================================
+% PAGE 2: PROBLEM STATEMENT & MOTIVATION
+%=============================================================================
+\newpage
+\thispagestyle{empty}
+
+% Title
+\begin{center}
+    \vspace*{-1em}
+    {\Huge \textbf{\textcolor{uidaiBlue}{Problem Statement \& Motivation}}}\\[0.5em]
+    {\large \textcolor{softGray}{Defining the Need for Actionable Aadhaar Intelligence}}
+\end{center}
+
+\vspace{0.8em}
+
+% Horizontal rule
+\noindent\textcolor{uidaiOrange}{\rule{\linewidth}{1.5pt}}
+
+\vspace{1em}
+
+% 2.1 Problem Statement
+\noindent
+\textbf{\textcolor{uidaiBlue}{2.1 Problem Statement}}\\[0.2em]
+Despite the availability of large volumes of Aadhaar enrolment and update data, decision-making related to capacity planning, service prioritization, and regional resource allocation remains largely reactive. There is currently no consolidated analytical framework that systematically translates enrolment and update patterns into early signals for administrative planning.
+
+\vspace{0.5em}
+\noindent
+\textbf{This study addresses the following problem:}
+\begin{quote}
+    \itshape
+    How can temporal and regional patterns in Aadhaar enrolment and update activity be transformed into actionable insights that enable UIDAI to proactively manage service demand, improve operational efficiency, and ensure equitable access across regions?
+\end{quote}
+
+\vspace{0.8em}
+
+% 2.2 Motivation
+\noindent
+\textbf{\textcolor{uidaiBlue}{2.2 Motivation}}\\[0.2em]
+Aadhaar has matured into a critical digital public infrastructure, supporting authentication, service delivery, and inclusion across multiple government programs. As enrolment saturation increases and update-driven demand grows, UIDAI faces a structural shift from expansion to long-term maintenance.
+
+However, several gaps limit effective planning:
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Operational decisions are often based on aggregated monthly reports, obscuring short-term stress and emerging bottlenecks.
+    \item Regional differences in service demand are not always visible through national-level averages.
+    \item Data anomalies and reporting artifacts can distort perceived workload and delay corrective action.
+\end{itemize}
+
+Without a clear understanding of these patterns, it becomes difficult to answer key administrative questions such as:
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Where will service demand rise in the near future?
+    \item Which regions require enrolment infrastructure versus update-focused capacity?
+    \item How early can operational stress be detected before citizen inconvenience escalates?
+\end{itemize}
+
+Addressing these gaps is essential for UIDAI to move from reactive service management toward anticipatory and data-informed governance.
+
+\vspace{0.8em}
+
+% 2.3 Objectives
+\noindent
+\textbf{\textcolor{uidaiBlue}{2.3 Objectives of the Study}}\\[0.2em]
+The primary objectives of this analysis are to:
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Identify temporal trends in Aadhaar enrolment and update activity to understand lifecycle transitions.
+    \item Detect anomalies and reporting irregularities that impact operational visibility.
+    \item Compare regional service demand patterns to reveal structural differences across states.
+    \item Assess demand concentration and service imbalance from an equity perspective.
+    \item Develop early warning indicators to support proactive capacity planning and resource allocation.
+\end{itemize}
+
+\vfill
+
+
+%=============================================================================
+% PAGE 3: DATASET DESCRIPTION
+%=============================================================================
+\newpage
+\thispagestyle{empty}
+
+% Title
+\begin{center}
+    \vspace*{-1em}
+    {\Huge \textbf{\textcolor{uidaiBlue}{Dataset Description}}}\\[0.5em]
+    {\large \textcolor{softGray}{Understanding the Scope, Structure, and Constraints of the Data}}
+\end{center}
+
+\vspace{0.8em}
+
+% Horizontal rule
+\noindent\textcolor{uidaiOrange}{\rule{\linewidth}{1.5pt}}
+
+\vspace{1em}
+
+% 3.1 Dataset Source
+\noindent
+\textbf{\textcolor{uidaiBlue}{3.1 Dataset Source}}\\[0.2em]
+The analysis is based exclusively on Aadhaar enrolment and update datasets provided by the Unique Identification Authority of India (UIDAI) as part of the National Hackathon. These datasets represent aggregated operational records generated through official Aadhaar enrolment and update processes across India.
+
+The datasets cover a continuous time period from \textbf{March 2025 to December 2025}, enabling the study of both short-term operational dynamics and medium-term trends.
+
+\vspace{1em}
+
+% 3.2 Data Granularity
+\noindent
+\textbf{\textcolor{uidaiBlue}{3.2 Data Granularity}}\\[0.2em]
+
+\textbf{Temporal Granularity}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Records are reported at a \textbf{daily level}, allowing for fine-grained temporal analysis.
+    \item Daily data enables identification of short-term fluctuations, reporting artifacts, and emerging service stress patterns.
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Geographic Granularity}
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item Data is aggregated at the \textbf{state and district} level.
+    \item Geographic identifiers reflect the location of service execution rather than individual residence.
+\end{itemize}
+
+This granularity supports both national-level comparisons and region-specific operational assessment.
+
+\vspace{1em}
+
+% 3.3 Columns Used
+\noindent
+\textbf{\textcolor{uidaiBlue}{3.3 Columns Used in the Analysis}}\\[0.5em]
+
+\renewcommand{\arraystretch}{1.4}
+\begin{center}
+\small 
+\begin{tabular}{|p{0.18\textwidth}|p{0.45\textwidth}|p{0.28\textwidth}|}
+\hline
+\textbf{Column Name} & \textbf{Description} & \textbf{Purpose in Analysis} \\
+\hline
+date & Reported date of enrolment or update activity & Trend analysis, anomaly detection \\
+\hline
+state / district & Geographic identifier of service location & Regional comparison, equity assessment \\
+\hline
+age\_0\_5 & Enrolments for children aged 0–5 years & Birth-linked enrolment analysis \\
+\hline
+age\_5\_17 & Enrolments for individuals aged 5–17 years & Juvenile enrolment trend identification \\
+\hline
+age\_18\_greater & Enrolments for adults aged 18+ years & Adult saturation assessment \\
+\hline
+bio\_age\_5\_17 & Biometric updates for ages 5–17 & Lifecycle update behavior analysis \\
+\hline
+bio\_age\_17\_ & Biometric updates for ages 17+ & Maintenance demand estimation \\
+\hline
+demo\_age\_5\_17 & Demographic updates for ages 5–17 & Mobility and dependency changes \\
+\hline
+demo\_age\_17\_ & Demographic updates for ages 17+ & Address and contact volatility analysis \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{1em}
+
+% 3.4 Data Limitations
+\noindent
+\textbf{\textcolor{uidaiBlue}{3.4 Data Limitations}}\\[0.2em]
+While the datasets are comprehensive at an operational level, the following limitations must be acknowledged:
+
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item \textbf{Aggregated nature:} The data does not contain individual-level records, preventing cohort-level behavioral tracking.
+    \item \textbf{Geographic inconsistencies:} Manual entry of geographic fields introduces occasional state–district misclassification.
+    \item \textbf{Reporting artifacts:} Certain dates reflect batch synchronization behavior rather than true event occurrence.
+    \item \textbf{Contextual absence:} No socioeconomic, policy, or service-outcome variables are included, limiting causal inference.
+\end{itemize}
+
+\vfill
+
+
+%=============================================================================
+% PAGE 4: METHODOLOGY
+%=============================================================================
+\newpage
+\thispagestyle{empty}
+
+% Title
+\begin{center}
+    \vspace*{-1em}
+    {\Huge \textbf{\textcolor{uidaiBlue}{Methodology}}}\\[0.5em]
+    {\large \textcolor{softGray}{From Raw Operational Data to Actionable Insights}}
+\end{center}
+
+\vspace{0.8em}
+
+% Horizontal rule
+\noindent\textcolor{uidaiOrange}{\rule{\linewidth}{1.5pt}}
+
+\vspace{1em}
+
+% 4.1 Data Cleaning
+\noindent
+\textbf{\textcolor{uidaiBlue}{4.1 Data Cleaning}}\\[0.2em]
+The initial stage focused on improving data reliability while preserving operational signals.
+
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item \textbf{Missing Values:} Records with missing activity counts were retained where possible and treated as zero-activity days rather than removed, ensuring continuity in temporal analysis.
+    \item \textbf{Outlier Treatment:} Extreme spikes observed on the first day of each month were identified as reporting artifacts rather than true demand surges. These observations were isolated for interpretation but excluded from trend smoothing to prevent distortion.
+    \item \textbf{Normalization:} State and district names were standardized through case normalization and whitespace trimming to eliminate duplicate geographic entries.
+\end{itemize}
+
+This approach prioritized data integrity without discarding structurally meaningful information.
+
+\vspace{1em}
+
+% 4.2 Data Preprocessing
+\noindent
+\textbf{\textcolor{uidaiBlue}{4.2 Data Preprocessing}}\\[0.2em]
+To enable meaningful comparison and interpretation, several preprocessing steps were applied:
+
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item \textbf{Feature Creation:}
+    \begin{itemize}[leftmargin=1.5em, topsep=0pt]
+        \item Update-to-Enrolment Ratios to indicate service maturity.
+        \item Rolling growth rates to capture momentum in update demand.
+        \item Daily activity volatility to assess predictability of load.
+    \end{itemize}
+    \item \textbf{Time Alignment:} All datasets were aligned to a common daily timeline to ensure consistency across enrolment, biometric updates, and demographic updates.
+    \item \textbf{Aggregation:} Data was aggregated at the state level for national comparison and at the district level where geographic consistency permitted deeper analysis.
+\end{itemize}
+
+These steps transformed raw operational counts into interpretable indicators suitable for policy analysis.
+
+\vspace{1em}
+
+% 4.3 Analytical Techniques
+\noindent
+\textbf{\textcolor{uidaiBlue}{4.3 Analytical Techniques}}\\[0.2em]
+A layered analytical strategy was adopted to balance interpretability with depth:
+
+\begin{itemize}[leftmargin=*, noitemsep, topsep=2pt]
+    \item \textbf{Univariate Analysis}\\
+    Used to understand individual distributions and temporal trends in enrolment and update volumes, establishing baseline system behavior.
+    \item \textbf{Bivariate Analysis}\\
+    Applied to examine relationships between time, geography, and service type, revealing shifts from enrolment-driven to update-driven demand.
+    \item \textbf{Multivariate Analysis}\\
+    State-level clustering was employed to identify distinct operational profiles based on service composition, enabling differentiated policy recommendations.
+    \item \textbf{Trend Analysis}\\
+    Rolling averages and seasonal comparisons were used to detect lifecycle transitions and end-of-year demand compression.
+    \item \textbf{Anomaly Detection and Early Warning Indicators}\\
+    Recurrent reporting irregularities and demand surges were identified using deviation analysis and volatility measures, forming the basis of the Service Stress Index (SSI).
+\end{itemize}
+
+Each method was selected to ensure transparency, interpretability, and direct relevance to administrative decision-making rather than algorithmic complexity.
+
+\vfill
+
+
+%=============================================================================
+% PAGE 5: ANALYSIS & VISUALISATIONS (SIDE-BY-SIDE ZIG-ZAG LAYOUT)
+%=============================================================================
+\newpage
+\thispagestyle{empty}
+
+% Title
+\begin{center}
+    \vspace*{-1em}
+    {\Huge \textbf{\textcolor{uidaiBlue}{Analysis \& Visualisations}}}\\[0.5em]
+    {\large \textcolor{softGray}{Curated Evidence Supporting Key Operational Insights}}
+\end{center}
+
+\vspace{0.8em}
+\noindent\textcolor{uidaiOrange}{\rule{\linewidth}{1.5pt}}
+\vspace{0.8em}
+
+%------------------------------------------------
+% 5.1 TEMPORAL ANALYSIS (Text Left | Image Right)
+%------------------------------------------------
+\noindent
+\textbf{\textcolor{uidaiBlue}{5.1 Temporal Analysis}}
+
+\noindent
+\begin{minipage}[c]{0.55\linewidth}
+    \textbf{Question: Who is driving new Aadhaar enrolment today?}
+    
+    \vspace{0.5em}
+    \textbf{Interpretation:} 
+    The visualization shows that the majority of new enrolments originate from the 0–17 age group, with the 0–5 segment dominating. This confirms that Aadhaar has largely saturated the adult population and is now primarily expanding through birth-linked enrolment.
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.42\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{age_segments.png}
+    \captionof{figure}{Age-wise Enrolment}
+\end{minipage}
+
+\vspace{1.5em}
+
+%------------------------------------------------
+% 5.2 GEOGRAPHIC ANALYSIS (Image Left | Text Right)
+%------------------------------------------------
+\noindent
+\textbf{\textcolor{uidaiBlue}{5.2 Geographic Analysis}}
+
+\noindent
+\begin{minipage}[c]{0.42\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{state_clusters_scatter.png}
+    \captionof{figure}{State Clusters}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.55\linewidth}
+    \textbf{Question: Do states exhibit distinct Aadhaar service demand patterns?}
+    
+    \vspace{0.5em}
+    \textbf{Interpretation:} 
+    States naturally separate into enrolment-heavy, update-heavy, and balanced operational profiles. This heterogeneity demonstrates that uniform national resource allocation is inefficient.
+\end{minipage}
+
+\vspace{1.5em}
+
+%------------------------------------------------
+% 5.3 SERVICE COMPOSITION (Text Left | Image Right)
+%------------------------------------------------
+\noindent
+\textbf{\textcolor{uidaiBlue}{5.3 Service Composition Analysis}}
+
+\noindent
+\begin{minipage}[c]{0.55\linewidth}
+    \textbf{Question: Has Aadhaar demand shifted from onboarding to maintenance?}
+    
+    \vspace{0.5em}
+    \textbf{Interpretation:} 
+    In mature states, update transactions significantly outweigh new enrolments, indicating a shift toward identity maintenance. This change has direct implications for infrastructure planning.
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.42\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{demand_composition.png}
+    \captionof{figure}{Demand Composition}
+\end{minipage}
+
+\vspace{1.5em}
+
+%------------------------------------------------
+% 5.4 EQUITY & CONCENTRATION (Image Left | Text Right)
+%------------------------------------------------
+\noindent
+\textbf{\textcolor{uidaiBlue}{5.4 Demand Concentration}}
+
+\noindent
+\begin{minipage}[c]{0.42\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{lorenz_concentration.png}
+    \captionof{figure}{Lorenz Curve}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.55\linewidth}
+    \textbf{Question: Is Aadhaar service demand evenly distributed?}
+    
+    \vspace{0.5em}
+    \textbf{Interpretation:} 
+    Update services exhibit significantly higher geographic concentration compared to enrolments. This suggests that while enrolment infrastructure is broadly equitable, update services face localized stress.
+\end{minipage}
+
+\vspace{1.5em}
+
+%------------------------------------------------
+% 5.5 EARLY WARNING (Text Left | Image Right)
+%------------------------------------------------
+\noindent
+\textbf{\textcolor{uidaiBlue}{5.5 Early Warning Analysis}}
+
+\noindent
+\begin{minipage}[c]{0.55\linewidth}
+    \textbf{Question: Which states are approaching operational overload?}
+    
+    \vspace{0.5em}
+    \textbf{Interpretation:} 
+    States with high SSI scores combine sustained update intensity, rapid growth, and volatile daily demand. These regions are at elevated risk of service bottlenecks.
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.42\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{state_stress_index.png}
+    \captionof{figure}{Service Stress Index}
+\end{minipage}
+
+\vspace{1.5em}
+
+%------------------------------------------------
+% 5.6 VOLATILITY (Image Left | Text Right)
+%------------------------------------------------
+\noindent
+\textbf{\textcolor{uidaiBlue}{5.6 Load Volatility}}
+
+\noindent
+\begin{minipage}[c]{0.42\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{load_trends.png}
+    \captionof{figure}{Daily Load Volatility}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.55\linewidth}
+    \textbf{Question: Are emerging service pressures predictable over time?}
+    
+    \vspace{0.5em}
+    \textbf{Interpretation:} 
+    Load volatility patterns reveal early warning signals of impending stress. Monitoring these trends enables UIDAI to reallocate mobile kits or adjust staffing before queues escalate.
+\end{minipage}
+
+\vfill
+
+
+%=============================================================================
+% PAGE 6: KEY INSIGHTS
+%=============================================================================
+\newpage
+\thispagestyle{empty}
+
+% Title
+\begin{center}
+    \vspace*{-1em}
+    {\Huge \textbf{\textcolor{uidaiBlue}{Key Insights}}}\\[0.5em]
+    {\large \textcolor{softGray}{From Data Patterns to Strategic Understanding}}
+\end{center}
+
+\vspace{0.8em}
+\noindent\textcolor{uidaiOrange}{\rule{\linewidth}{1.5pt}}
+\vspace{1em}
+
+% Insights Content (Standard List)
+\noindent
+\textbf{\textcolor{uidaiBlue}{Insight 1: Aadhaar enrolment has transitioned from adult onboarding to birth-linked integration.}}  
+\textbf{Evidence:} Figure 5.1 shows that approximately 97\% of new enrolments originate from individuals below 18 years of age, with the 0–5 cohort forming the largest share.
+\textbf{Interpretation:} Enrolment infrastructure should shift toward hospital and neonatal integration rather than large-scale adult enrolment drives.
+
+\vspace{1em}
+
+\noindent
+\textbf{\textcolor{uidaiBlue}{Insight 2: Operational demand has structurally shifted from enrolment to identity maintenance.}}  
+\textbf{Evidence:} Figure 5.3 demonstrates that in several mature states, biometric and demographic updates outnumber new enrolments by more than an order of magnitude.
+\textbf{Interpretation:} Capacity planning must prioritize update throughput and operator specialization.
+
+\vspace{1em}
+
+\noindent
+\textbf{\textcolor{uidaiBlue}{Insight 3: Service demand is unevenly distributed across states.}}  
+\textbf{Evidence:} Geographic concentration analysis reveals that update demand is heavily concentrated in a limited set of states.
+\textbf{Interpretation:} Uniform resource allocation risks under-serving high-demand regions; state-specific strategies are essential.
+
+\vspace{1em}
+
+\noindent
+\textbf{\textcolor{uidaiBlue}{Insight 4: System-level reporting practices limit real-time visibility.}}  
+\textbf{Evidence:} Temporal analysis shows recurrent activity spikes on the first day of each month.
+\textbf{Interpretation:} These spikes indicate batch synchronization. Reliance on such data can delay response to emerging bottlenecks.
+
+\vspace{1em}
+
+\noindent
+\textbf{\textcolor{uidaiBlue}{Insight 5: Biometric updates are the dominant driver of operational load.}}  
+\textbf{Evidence:} Mature states exhibit sustained biometric update volumes far exceeding enrolments.
+\textbf{Interpretation:} Since biometric updates are time-intensive, these states face disproportionate pressure, necessitating high-throughput biometric infrastructure.
+
+\vspace{1em}
+
+\noindent
+\textbf{\textcolor{uidaiBlue}{Insight 6: Early warning signals can identify service stress proactively.}}  
+\textbf{Evidence:} The Service Stress Index identifies states exhibiting rising demand intensity and unpredictability.
+\textbf{Interpretation:} Monitoring these indicators enables proactive intervention shifting UIDAI from reactive to anticipatory governance.
+
+\vfill
+
+%=============================================================================
+% PAGE 7: IMPACT & RECOMMENDATIONS
+%=============================================================================
+\newpage
+\thispagestyle{empty}
+
+% Title
+\begin{center}
+    \vspace*{-1em}
+    {\Huge \textbf{\textcolor{uidaiBlue}{Impact \& Recommendations}}}\\[0.5em]
+    {\large \textcolor{softGray}{Translating Insights into Actionable UIDAI Decisions}}
+\end{center}
+
+\vspace{0.8em}
+\noindent\textcolor{uidaiOrange}{\rule{\linewidth}{1.5pt}}
+\vspace{1em}
+
+\noindent
+\textbf{\textcolor{uidaiBlue}{Recommendation 1: Pivot Aadhaar enrolment strategy toward birth-linked integration}}  
+\textbf{Action:} UIDAI should progressively integrate Aadhaar enrolment into hospital and neonatal registration workflows.
+\textbf{Benefit:} Improves enrolment efficiency and ensures universal early-life coverage.
+
+\vspace{1.2em}
+
+\noindent
+\textbf{\textcolor{uidaiBlue}{Recommendation 2: Reallocate infrastructure toward update-heavy states}}  
+\textbf{Action:} State offices should prioritize deployment of high-throughput biometric devices in maintenance-heavy states.
+\textbf{Benefit:} Reduces queue times and aligns resources with actual service demand.
+
+\vspace{1.2em}
+
+\noindent
+\textbf{\textcolor{uidaiBlue}{Recommendation 3: Implement state-specific operational planning}}  
+\textbf{Action:} UIDAI HQ should adopt cluster-based planning frameworks (enrolment-focused vs update-focused).
+\textbf{Benefit:} Enhances service equity and improves cost-effectiveness.
+
+\vspace{1.2em}
+
+\noindent
+\textbf{\textcolor{uidaiBlue}{Recommendation 4: Enforce daily reporting and synchronization standards}}  
+\textbf{Action:} Mandate API-driven daily data synchronization across enrolment centers.
+\textbf{Benefit:} Improves operational transparency and enables timely intervention.
+
+\vspace{1.2em}
+
+\noindent
+\textbf{\textcolor{uidaiBlue}{Recommendation 5: Deploy the Service Stress Index as an early-warning dashboard}}  
+\textbf{Action:} Integrate the SSI into a centralized monitoring dashboard with threshold-based alerts.
+\textbf{Benefit:} Shifts UIDAI from reactive issue resolution to anticipatory governance.
+
+\vspace{1.2em}
+
+\noindent
+\textbf{\textcolor{uidaiBlue}{Recommendation 6: Strengthen data entry validation at source}}  
+\textbf{Action:} Upgrade software interfaces to enforce standardized geographic selection.
+\textbf{Benefit:} Improves data quality for policy reporting and reduces reconciliation effort.
+
+\vfill
+
+%=============================================================================
+% PAGE 8: LIMITATIONS & FUTURE WORK
+%=============================================================================
+\newpage
+\thispagestyle{empty}
+
+% Title
+\begin{center}
+    \vspace*{-1em}
+    {\Huge \textbf{\textcolor{uidaiBlue}{Limitations \& Future Work}}}\\[0.5em]
+    {\large \textcolor{softGray}{Analytical Boundaries and Opportunities for Extension}}
+\end{center}
+
+\vspace{0.8em}
+\noindent\textcolor{uidaiOrange}{\rule{\linewidth}{1.5pt}}
+\vspace{1em}
+
+\noindent
+\textbf{\textcolor{uidaiBlue}{8.1 Limitations}}\\[0.2em]
+While the analysis provides robust operational insights, certain limitations are inherent to the available data and scope:
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Aggregated Data Structure:} The datasets are aggregated at state and district levels, preventing individual-level or cohort-based behavioral analysis.
+    \item \textbf{Absence of Socio-Economic Context:} Variables such as income, education, or migration status are not available.
+    \item \textbf{Reporting and Timing Ambiguity:} Reported dates may reflect data synchronization rather than actual service occurrence.
+    \item \textbf{External Influences Not Captured:} Policy changes or local events affecting service volumes are not explicitly represented.
+\end{itemize}
+
+\vspace{1em}
+
+\noindent
+\textbf{\textcolor{uidaiBlue}{8.2 Future Work}}\\[0.2em]
+Building on this analysis, several extensions could significantly enhance UIDAI’s analytical capabilities:
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Integration with Population Data:} Linking Aadhaar activity with census and birth registration datasets.
+    \item \textbf{Real-Time Monitoring Dashboards:} Deploying live dashboards incorporating the Service Stress Index.
+    \item \textbf{Predictive Capacity Planning Models:} Developing short-term forecasting models for update demand.
+    \item \textbf{Region-Specific Policy Simulation:} Scenario-based simulations to assess the impact of administrative decisions.
+\end{itemize}
+
+\vfill
+
+%=============================================================================
+% PAGE 9: APPENDIX
+%=============================================================================
+\newpage
+\thispagestyle{empty}
+
+% Title
+\begin{center}
+    \vspace*{-1em}
+    {\Huge \textbf{\textcolor{uidaiBlue}{Appendix: Code \& Reproducibility}}}\\[0.5em]
+    {\large \textcolor{softGray}{Ensuring Transparency, Rigor, and Reusability}}
+\end{center}
+
+\vspace{0.8em}
+\noindent\textcolor{uidaiOrange}{\rule{\linewidth}{1.5pt}}
+\vspace{1em}
+
+% 9.1 Code Overview
+\noindent
+\textbf{\textcolor{uidaiBlue}{9.1 Code Overview}}\\[0.2em]
+The complete analytical workflow is implemented in a structured Jupyter Notebook titled \textbf{\texttt{comprehensive\_uidai\_analysis.ipynb}}, which covers data ingestion, preprocessing, feature engineering, analysis, and visualization.
+
+\vspace{1em}
+
+% 9.2 Repository Structure (Side-by-Side)
+\noindent
+\textbf{\textcolor{uidaiBlue}{9.2 Repository Structure (Visual Overview)}}\\[0.2em]
+
+% Side-by-Side Layout
+\noindent
+\begin{minipage}[t]{0.58\linewidth}
+    \vspace{0pt} 
+    To ensure transparency and reproducibility, the project follows a clear and modular repository structure.
+    \medskip
+    \textbf{Structure Rationale:}
+    \begin{itemize}[leftmargin=*, topsep=2pt, itemsep=2pt]
+        \item \textbf{api\_data\_aadhaar\_* folders} store raw UIDAI datasets.
+        \item \textbf{visuals/} contains all generated charts.
+        \item \textbf{comprehensive\_uidai\_analysis.ipynb} implements the full analytical pipeline.
+        \item \textbf{requirements.txt} ensures environment reproducibility.
+        \item \textbf{README.md} documents project purpose.
+    \end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.38\linewidth}
+    \vspace{0pt} 
+    \textbf{Repository Snapshot:}
+    \vspace{0.5em}
+    \centering
+    \includegraphics[width=\linewidth, height=5cm, keepaspectratio]{repo_structure.png}
+    \captionof{figure}{Repository Structure}
+\end{minipage}
+
+\vspace{1.5em}
+
+\noindent
+\textbf{\textcolor{uidaiBlue}{9.3 Illustrative Code Snippets}}\\[0.2em]
+The following excerpt demonstrates the automated data ingestion pipeline used to load, merge, and standardize raw CSV records across enrolment, biometric, and demographic datasets. This function ensures consistent date formatting and geographic normalization before analysis begins:
+
+\vspace{0.5em}
+
+\begin{figure}[H]
+    \centering
+    \setlength{\fboxsep}{0pt} 
+    \fbox{\includegraphics[width=0.85\linewidth]{code_snippet.png}}
+    \caption*{\textit{Figure A2: Python implementation for data loading, merging, and standardization.}}
+\end{figure}
+\vspace{1em}
+
+% 9.4 Libraries
+\noindent
+\textbf{\textcolor{uidaiBlue}{9.4 Libraries and Tools Used}}\\[0.2em]
+The analysis was conducted using widely adopted, open-source tools:
+\begin{itemize}[leftmargin=*, noitemsep]
+    \item \textbf{Python} – Core programming language
+    \item \textbf{Pandas, NumPy} – Data manipulation
+    \item \textbf{Matplotlib, Seaborn} – Visualization
+    \item \textbf{Scikit-learn} – Clustering
+    \item \textbf{Jupyter Notebook} – Analysis
+    \item \textbf{LaTeX} – Reporting
+\end{itemize}
+
+\vspace{1em}
+
+\vfill
+
+\end{document}
